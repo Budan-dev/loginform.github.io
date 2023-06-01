@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>REGISTRATION</title>
+  <script src="need.js"></script>
+	 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+  <style>
+    body {
+      background: cadetblue;
+    }
+.reg {
+  text-align: center;
+  padding: 20px;
+}
+        .navbar {
+            position: relative;
+            background: black;
+            
+        }
+
+        #navlist {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            background: black;
+        }
+
+        #navlist li {
+            flex: auto;
+            text-align: center;
+            padding: 1.6em;
+            font-size: 18px;
+            color: white;
+        }
+
+        #navlist li:hover {
+            background: red;
+        }
+
+        #toggle-nav {
+            display: none;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        @media all and ( max-width: 500px ) { 
+
+            .navbar {
+                padding: 1.6em;
+            }
+
+            #navlist {
+                flex-direction: column;
+                display: none;
+            }
+
+            #toggle-nav {
+                display: block;
+                color: white;
+            }
+
+.fog{
+  transition: ease-in 50s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <nav class="navbar">
+
+        <span id="toggle-nav" onclick="toggleNav()">
+            <i class="fa fa-bars"></i>
+        </span>
+
+        <ul id="navlist">
+            <li><a href="#"> HOME</a></li>
+            <li>SIGNUP</li>
+            <li>REGISTER</li>
+        </ul>
+
+    </nav>
+  <h1 class="reg"><i>REGISTRATION</i></h1>
+  <div class="container">
+  <form class="row g-3" method="" action="get">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>Kogi</option>
+      <option>Abuja</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Rememeber password
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+ <div > <a  href="Forgot password.html" class="fog" onclick="delayLinks(event)" id="fogpass">LOGIN?</a></div>
+</div>
+<script>
+
+    var nav = document.getElementById('navlist');
+
+    function toggleNav () {       
+
+        if ( nav.style.display === "" )
+        nav.style.display = "block";
+
+        else
+        nav.style.display = "";
+    }
+
+
+    function windowResizeHandler () {
+        if ( screen.width > 500 )
+        nav.style.display = "";
+    }
+
+    window.addEventListener("resize", windowResizeHandler);
+ 
+
+</script>
+
+</body>
+</html>
